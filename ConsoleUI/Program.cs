@@ -33,15 +33,15 @@ namespace ConsoleUI
 
             // Create a list of Vehicle called vehicles - DONE
             var vehicles = new List<Vehicle>();
-            Car myCar1 = new Car()
+            var myCar1 = new Car()
             {
                 Year = 2022,
                 Make = "Ferrari",
                 Model = "Spider-x30",
             };
-            Motorcylce myBike = new Motorcylce()
+            var myBike = new Motorcylce()
             {
-                Year = 2003,
+                Year = 2015,
                 Make = "Kawasaki",
                 Model = "Ninja-500",
             };
@@ -64,7 +64,9 @@ namespace ConsoleUI
 
             foreach (var item in vehicles)
             {
-                Console.WriteLine($"{item.Make}-{item.Model}-{item.Year}");
+                Console.WriteLine($"Make: {item.Make}");
+                Console.WriteLine($"Model: {item.Model}");
+                Console.WriteLine($"Year: {item.Year}");                 
                 Console.WriteLine();
             }
             /*
@@ -79,7 +81,10 @@ namespace ConsoleUI
              */
 
             // Call each of the drive methods for one car and one motorcycle
+            myCar1.DriveVirtual();
             myCar1.DriveAbstract();
+            Console.WriteLine();
+            Console.WriteLine();
             myBike.DriveVirtual();
             myBike.DriveAbstract();
 

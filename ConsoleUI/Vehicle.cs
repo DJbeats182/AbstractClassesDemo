@@ -12,7 +12,7 @@ namespace ConsoleUI
         public abstract void DriveAbstract();
         public virtual void DriveVirtual()
         {
-            string ten =  "dkf"; // place holder
+            Console.WriteLine("Driving a Vehicle with a virtual method");
         }
     }
 }
